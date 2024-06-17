@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={lato.className}>{children}</body>
+      <body className={'bg-slate-50 dark:bg-slate-900 ' + lato.className}>{children}</body>
     </html>
   );
 }

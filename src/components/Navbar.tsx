@@ -2,6 +2,7 @@
 
 import useScroll from '@/app/hooks/useScroll';
 import useScrollPosition from '@/app/hooks/useScrollPosition';
+import LightDarkButton from './LightDarkButton';
 
 const Navbar = () => {
   const scroll = useScroll();
@@ -20,8 +21,13 @@ const Navbar = () => {
   }
 
   return (
-    <nav className={'w-full navbar bg-white lg:top-0  lg:pt-6 lg:pb-6 lg:fixed transition duration-300 ' + classScroll}>
-      <div className="container mx-auto max-w-screen-xl flex justify-end lg:px-24 ">
+    <nav
+      className={
+        'w-full navbar bg-slate-50 dark:bg-slate-900 dark:text-slate-300 lg:top-0  lg:pt-6 lg:pb-6 lg:fixed transition duration-300 ' +
+        classScroll
+      }
+    >
+      <div className="container mx-auto max-w-screen-xl flex justify-end items-center lg:px-24 ">
         <ul className="flex justify-between font-bold text-lg gap-8">
           <li className="transition duration-300">
             <a href=""> about </a>
@@ -36,6 +42,7 @@ const Navbar = () => {
             <a href=""> projects </a>
           </li>
         </ul>
+        <LightDarkButton />
       </div>
     </nav>
   );

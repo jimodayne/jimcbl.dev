@@ -15,19 +15,21 @@ const WorkItem = (props: WorkItemProps) => {
 
   return (
     <div key={company} className="text-sm py-4">
-      <div className="company text-xl font-bold mb-2">{company}</div>
+      <div className="dark:text-gray-100 company text-xl font-bold mb-2">{company}</div>
 
       <div className="flex flex-col lg:flex-row justify-between">
-        <p className="font-bold text-base  mb-2">{title}</p>
-        <p className=" text-slate-400 mb-2">{time}</p>
+        <p className="font-bold text-base dark:text-slate-200 mb-2">{title}</p>
+        <p className=" text-slate-400 dark:text-gray-400 mb-2">{time}</p>
       </div>
       <p className="mb-2">{location}</p>
-      <div className="mb-2">
+      <div className="mb-4">
         <p>{content.intro} </p>
-        {content.list?.length ? content.list.map((i, idx) => <li key={idx}> {i} </li>) : null}
+        <ul className="dark:text-slate-400  list-disc">
+          {content.list?.length ? content.list.map((i, idx) => <li key={idx}> {i} </li>) : null}
+        </ul>
       </div>
       {content.stack?.length ? (
-        <div className="flex flex-wrap gap-1">
+        <div className="flex flex-wrap gap-2 ">
           {content.stack.map((item, idx) => (
             <Badge key={idx} color="gray">
               {item}

@@ -2,23 +2,93 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+.theme-toggle.theme-toggle--reversed .theme-toggle__expand {
+  transform: scale(-1, 1);
+}
+.theme-toggle {
+  --theme-toggle__expand--duration: 500ms;
+}
+.theme-toggle__expand g circle,
+.theme-toggle__expand g path {
+  transform-origin: center;
+  transition: transform calc(var(--theme-toggle__expand--duration) * 0.65) cubic-bezier(0, 0, 0, 1.25)
+    calc(var(--theme-toggle__expand--duration) * 0.35);
+}
+.theme-toggle__expand :first-child path {
+  transition-property: transform, d;
+  transition-duration: calc(var(--theme-toggle__expand--duration) * 0.6);
+  transition-timing-function: cubic-bezier(0, 0, 0.5, 1);
+}
+.theme-toggle input[type='checkbox']:checked ~ .theme-toggle__expand g circle,
+.theme-toggle--toggled:not(label).theme-toggle .theme-toggle__expand g circle {
+  transform: scale(1.4);
+  transition-delay: 0s;
+}
+.theme-toggle input[type='checkbox']:checked ~ .theme-toggle__expand g path,
+.theme-toggle--toggled:not(label).theme-toggle .theme-toggle__expand g path {
+  transform: scale(0.75);
+  transition-delay: 0s;
+}
+.theme-toggle input[type='checkbox']:checked ~ .theme-toggle__expand :first-child path,
+.theme-toggle--toggled:not(label).theme-toggle .theme-toggle__expand :first-child path {
+  d: path('M-9 3h25a1 1 0 0017 13v30H0Z');
+  transition-delay: calc(var(--theme-toggle__expand--duration) * 0.4);
+  transition-timing-function: cubic-bezier(0, 0, 0, 1.25);
+}
+@supports not (d: path('')) {
+  .theme-toggle input[type='checkbox']:checked ~ .theme-toggle__expand :first-child path,
+  .theme-toggle--toggled:not(label).theme-toggle .theme-toggle__expand :first-child path {
+    transform: translate3d(-9px, 14px, 0);
+  }
+}
+.theme-toggle {
+  border: none;
+  background: 0 0;
+  cursor: pointer;
+}
+.theme-toggle input[type='checkbox'] {
+  display: none;
+}
+.theme-toggle .theme-toggle-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle:not(.theme-toggle--force-motion) * {
+    transition: none !important;
+  }
+}
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: 248 250 252;
+  --background-end-rgb: 241 245 249;
+
+  --color-back: #fff;
+  --color-front: #000;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
+    --background-start-rgb: 15 23 42;
     --background-end-rgb: 0, 0, 0;
+
+    --color-back: #000;
+    --color-front: #fff;
   }
-}
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
-  /* background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb)); */
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
@@ -39,4 +109,12 @@ body {
 
 .navbar.up {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.theme-toggle--toggled {
+  background: var(--color-back);
+
+  & svg {
+    color: var(--color-front);
+  }
 }
