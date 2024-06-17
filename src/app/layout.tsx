@@ -1,6 +1,16 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { lato } from './font';
+import dayjs from 'dayjs';
+const relativeTime = require('dayjs/plugin/relativeTime');
+dayjs.extend(relativeTime);
+
+declare module 'dayjs' {
+  interface Dayjs {
+    to(...args: any): string;
+    toNow(...args: any): string;
+  }
+}
 
 export const metadata: Metadata = {
   title: 'Jim Tran',

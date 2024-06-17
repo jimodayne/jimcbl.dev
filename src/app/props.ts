@@ -3,6 +3,8 @@ export interface ExperienceItem {
   company: string;
   location: string;
   title: string;
+  startDate: string;
+  endData?: string;
   content: {
     intro: string;
     list: string[];
@@ -32,6 +34,7 @@ export const techStacks: string[] = [
 export const experienceProps: ExperienceItem[] = [
   {
     time: 'Jul 2023 - Present',
+    startDate: '2023-07-01',
     company: 'Hello Clever',
     location: 'Remote | Sydney, Australia',
     title: 'Growth Support Engineer',
@@ -48,6 +51,8 @@ export const experienceProps: ExperienceItem[] = [
   },
   {
     time: 'Nov 2022 - Jul 2023',
+    startDate: '2022-11-01',
+    endData: '2023-07-01',
     company: 'Sassybae',
     location: 'Remote | Sydney, Australia',
     title: 'Software Engineer',
@@ -62,7 +67,9 @@ export const experienceProps: ExperienceItem[] = [
     },
   },
   {
-    time: 'Nov 2021 – Aug 2022',
+    time: 'Nov 2021 - Aug 2022',
+    startDate: '2021-11-01',
+    endData: '2022-08-01',
     company: 'LINE Corp',
     location: 'Full-time | Ho Chi Minh City, Vietnam',
     title: 'Software Engineer',
@@ -79,7 +86,9 @@ export const experienceProps: ExperienceItem[] = [
     },
   },
   {
-    time: 'Mar 2021 - Oct 2021',
+    time: 'Jul 2019 - Oct 2021',
+    startDate: '2019-07-01',
+    endData: '2021-10-01',
     company: 'Zalo (VNG Corp)',
     location: 'Full-time | Ho Chi Minh City, Vietnam',
     title: 'Associate Software Engineer',

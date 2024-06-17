@@ -26,3 +26,17 @@ body {
     text-wrap: balance;
   }
 }
+
+.navbar li {
+  border-bottom-color: transparent;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  padding: 4px;
+}
+.navbar li:hover {
+  border-bottom-color: rgb(var(--foreground-rgb));
+}
+
+.navbar.up {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
