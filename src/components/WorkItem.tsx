@@ -23,7 +23,7 @@ const WorkItem = (props: WorkItemProps) => {
       </div>
       <p className="mb-2">{location}</p>
       <div className="mb-4">
-        <p>{content.intro} </p>
+        <p className="text-base">{content.intro} </p>
         <ul className="dark:text-slate-400  list-disc">
           {content.list?.length ? content.list.map((i, idx) => <li key={idx}> {i} </li>) : null}
         </ul>

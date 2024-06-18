@@ -34,7 +34,7 @@ const Navbar = () => {
             <a href=""> about </a>
           </li>
           <li className="transition duration-300">
-            <a href=""> education </a>x`
+            <a href=""> education </a>
           </li>
           <li className="transition duration-300">
             <a href=""> experience </a>
