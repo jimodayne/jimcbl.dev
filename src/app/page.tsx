@@ -7,6 +7,7 @@ import dayjs from 'dayjs';
 import { useEffect } from 'react';
 import Image from 'next/image';
 import flameImg from '../assets/flame.jpg';
+import Stacks from '@/components/Stacks';
 
 export default function Home() {
   return (
@@ -30,33 +31,27 @@ export default function Home() {
                 Unsplash.
               </p>
             </div>
+
+            <Stacks className="flex lg:hidden mt-6" />
+
+            <SocialNetworkIcons className="mt-6 lg:hidden" />
+
             {/* <Image className=" absolute -z-10" src={flameImg} alt="flames" width={750} height={250} /> */}
-            <div className="mt-14">
+            <div className="mt-14 mb-14">
               <h3 className="text-2xl font-bold mb-6 dark:text-gray-200"> Experience </h3>
               {experienceProps.map((item, idx) => {
                 return <WorkItem key={idx} {...item} />;
               })}
             </div>
 
-            <div className="mt-14">
+            {/* <div className="mt-14">
               <h3 className="text-2xl font-bold mb-6"> Project </h3>
-            </div>
+            </div> */}
           </div>
           <div className="mid lg:w-1/12" />
           <div className="right lg:w-3/12">
             <SocialNetwork />
-            <div className="tech-stacks flex flex-wrap gap-x-2">
-              {techStacks.map((item, idx) => {
-                return (
-                  <div
-                    key={idx}
-                    className="bg-gray-200 transition duration-500 cursor-grab hover:bg-gray-300 dark:bg-slate-700  rounded-md inline-block px-2 py-1 mb-2 text-sm"
-                  >
-                    {item}
-                  </div>
-                );
-              })}
-            </div>
+            <Stacks className="hidden lg:flex" />
 
             <div className="education mt-14 ">
               <h3 className="text-2xl font-bold mb-6 dark:text-gray-100"> Education </h3>

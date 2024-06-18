@@ -3,6 +3,7 @@
 import useScroll from '@/app/hooks/useScroll';
 import useScrollPosition from '@/app/hooks/useScrollPosition';
 import LightDarkButton from './LightDarkButton';
+import { FaBars } from 'react-icons/fa';
 
 const Navbar = () => {
   const scroll = useScroll();
@@ -27,13 +28,13 @@ const Navbar = () => {
         classScroll
       }
     >
-      <div className="container mx-auto max-w-screen-xl flex justify-end items-center lg:px-24 ">
+      <div className="container mx-auto max-w-screen-xl justify-end items-center lg:px-24 hidden lg:flex">
         <ul className="flex justify-between font-bold text-lg gap-8">
           <li className="transition duration-300">
             <a href=""> about </a>
           </li>
           <li className="transition duration-300">
-            <a href=""> education </a>
+            <a href=""> education </a>x`
           </li>
           <li className="transition duration-300">
             <a href=""> experience </a>
@@ -42,6 +43,10 @@ const Navbar = () => {
             <a href=""> projects </a>
           </li>
         </ul>
+        <LightDarkButton />
+      </div>
+      <div className="pt-4 flex lg:hidden items-center justify-end">
+        {/* <FaBars size={24} /> */}
         <LightDarkButton />
       </div>
     </nav>

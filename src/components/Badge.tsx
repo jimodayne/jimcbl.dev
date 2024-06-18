@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 const MAP_COLOR = {
-  gray: ['bg-gray-50 dark:bg-gray-700', 'text-gray-800 dark:text-gray-200', 'ring-gray-500/20'],
+  gray: ['bg-gray-100 dark:bg-gray-700', 'text-gray-800 dark:text-gray-200', 'ring-gray-500/20'],
   red: ['bg-red-50', 'text-red-700', 'ring-red-600/10'],
   yellow: ['bg-yellow-50', 'text-yellow-800', 'ring-yellow-600/20'],
   green: ['bg-green-50', 'text-green-700', 'ring-green-600/20'],
