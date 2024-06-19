@@ -1,12 +1,9 @@
-import { experienceProps, techStacks } from './props';
+import { SOCIAL_NETWORK_LINKS, experienceProps } from './props';
 import WorkItem from '../components/WorkItem';
 import Navbar from '@/components/Navbar';
 import { garamond } from './font';
 import SocialNetwork, { SocialNetworkIcons } from '@/components/SocialNetwork';
 import dayjs from 'dayjs';
-import { useEffect } from 'react';
-import Image from 'next/image';
-import flameImg from '../assets/flame.jpg';
 import Stacks from '@/components/Stacks';
 
 export default function Home() {
@@ -21,14 +18,23 @@ export default function Home() {
               <h1 className={'text-4xl lg:text-7xl font-bold dark:text-white ' + garamond.className}>Jim Tran</h1>
               <h2 className="text-2xl mt-1 dark:text-grey-400">Software Engineer</h2>
             </div>
-            <div className="intro ">
+            <div className="intro dark:text-gray-200 ">
               <p className=" mb-2">
-                I&apos;m a software engineer based in Finland. I have a passion for staying at the forefront of
-                technology by continuously learning new frameworks and tools.
+                I&apos;m an experienced Software Engineer with a demonstrated history of working in the internet
+                industry. Worked mostly with{' '}
+                <span className="underline font-bold decoration-yellow-400 transition duration-200 hover:decoration-yellow-600">
+                  JavaScript
+                </span>
+                , its frameworks and libraries.
               </p>
               <p className="">
-                Outside of coding, I enjoy taking photos, traveling, and music. You can find my photography work on
-                Unsplash.
+                Outside of coding, I enjoy taking photos, traveling, and music. You can find my photography work on{' '}
+                <a target="_blank" href={SOCIAL_NETWORK_LINKS.unsplash}>
+                  <span className="underline font-bold decoration-sky-400 transition duration-200 hover:decoration-sky-600">
+                    Unsplash
+                  </span>
+                </a>
+                .
               </p>
             </div>
 

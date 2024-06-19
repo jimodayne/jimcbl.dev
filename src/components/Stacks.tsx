@@ -8,7 +8,7 @@ const Stacks = (props: any) => {
         return (
           <div
             key={idx}
-            className="bg-gray-200 transition duration-500 cursor-grab hover:bg-gray-300 dark:bg-slate-700  rounded-md inline-block px-2 py-1 mb-2 text-sm"
+            className="bg-gray-200 transition duration-500 cursor-grab hover:bg-gray-300 hover:scale-105 dark:bg-slate-700 dark:hover:bg-slate-600 dark:hover:text-gray-50  rounded-md inline-block px-2 py-1 mb-2 text-sm"
           >
             {item}
           </div>

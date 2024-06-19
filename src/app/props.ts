@@ -1,3 +1,4 @@
+export type SocialNetworkType = 'linkedin' | 'github' | 'telegram' | 'unsplash' | 'instagram';
 export interface ExperienceItem {
   time: string;
   company: string;
@@ -15,6 +16,14 @@ export interface ExperienceItem {
     text: string;
   }[];
 }
+
+export const SOCIAL_NETWORK_LINKS: Record<SocialNetworkType, string> = {
+  linkedin: 'https://linkedin.com/in/thinhtran98/',
+  github: 'https://github.com/jimodayne',
+  telegram: 'https://t.me/jimtran_hc',
+  unsplash: 'https://unsplash.com/@jimcbl',
+  instagram: 'https://instagram.com/jimcbl/',
+};
 
 export const techStacks: string[] = [
   'React.js',
@@ -46,7 +55,17 @@ export const experienceProps: ExperienceItem[] = [
         'Demonstrated strong communication and problem-solving skills',
         'Contributed to a monthly revenue stream in the millions dollar.',
       ],
-      stack: ['Postman', 'Notion', 'Figma', 'Microsoft Office', 'Skype', 'Microsoft Teams', 'Slack'],
+      stack: [
+        'Postman',
+        'Notion',
+        'Figma',
+        'Microsoft Office',
+        'Skype',
+        'Microsoft Teams',
+        'Slack',
+        'WordPress',
+        'Rest API',
+      ],
     },
   },
   {

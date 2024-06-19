@@ -39,6 +39,7 @@ export default function LightDarkButton() {
   return (
     <button
       type="button"
+      aria-label="Toggle dark mode"
       onClick={() => toggleDarkMode(isDark)}
       className="h-8 w-8 ml-4 lg:ml-8 rounded-lg p-1 hover:bg-gray-100 dark:hover:bg-gray-700"
     >

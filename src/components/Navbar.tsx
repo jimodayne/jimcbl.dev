@@ -1,7 +1,7 @@
 'use client';
 
-import useScroll from '@/app/hooks/useScroll';
-import useScrollPosition from '@/app/hooks/useScrollPosition';
+import useScroll from '@/hooks/useScroll';
+import useScrollPosition from '@/hooks/useScrollPosition';
 import LightDarkButton from './LightDarkButton';
 import { FaBars } from 'react-icons/fa';
 
@@ -24,7 +24,7 @@ const Navbar = () => {
   return (
     <nav
       className={
-        'w-full navbar bg-slate-50 dark:bg-slate-900 dark:text-slate-300 lg:top-0  lg:pt-6 lg:pb-6 lg:fixed transition duration-300 ' +
+        'w-full navbar bg-slate-50 dark:bg-slate-900 dark:text-slate-300 lg:top-0  lg:pt-6 lg:pb-6 lg:fixed lg:transition lg:duration-200 ' +
         classScroll
       }
     >

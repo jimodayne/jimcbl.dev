@@ -1,24 +1,30 @@
+import { SOCIAL_NETWORK_LINKS, SocialNetworkType } from '@/app/props';
+import { IconType } from 'react-icons';
 import { FaLinkedin, FaGithub, FaTelegram, FaUnsplash, FaInstagram } from 'react-icons/fa';
+
+const socialIcons: Record<SocialNetworkType, IconType> = {
+  linkedin: FaLinkedin,
+  github: FaGithub,
+  telegram: FaTelegram,
+  unsplash: FaUnsplash,
+  instagram: FaInstagram,
+};
 
 export const SocialNetworkIcons = (props: any) => {
   const { className } = props;
+
   return (
     <div className={'flex gap-4 py-2 ' + className}>
-      <a target="_blank" href="https://linkedin.com/in/thinhtran98/">
-        <FaLinkedin size={28} className="transition duration-300 hover:opacity-60" />
-      </a>
-      <a target="_blank" href="https://github.com/jimodayne">
-        <FaGithub size={28} className="transition duration-300 hover:opacity-60" />
-      </a>
-      <a target="_blank" href="https://t.me/jimtran_hc">
-        <FaTelegram size={28} className="transition duration-300 hover:opacity-60" />
-      </a>
-      <a target="_blank" href="https://unsplash.com/@jimcbl">
-        <FaUnsplash size={28} className="transition duration-300 hover:opacity-60" />
-      </a>
-      <a target="_blank" href="https://instagram.com/jimcbl/">
-        <FaInstagram size={28} className="transition duration-300 hover:opacity-60" />
-      </a>
+      {Object.entries(socialIcons).map(([key, Icon]) => {
+        return (
+          <a key={key} target="_blank" href={SOCIAL_NETWORK_LINKS[key as SocialNetworkType]}>
+            <Icon
+              size={28}
+              className="transition dark:hover:text-white duration-300 hover:text-black dark:hover:opacity-100 hover:scale-110"
+            />
+          </a>
+        );
+      })}
     </div>
   );
 };
