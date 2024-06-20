@@ -15,10 +15,9 @@ declare module 'dayjs' {
 export const metadata: Metadata = {
   title: 'Jim Tran',
   openGraph: {
-    title: 'Jim Tran',
     type: 'profile',
-    images: ['https://jimcbl.dev/preview.jpg'],
-    url: 'https://jimcbl.dev',
+    images: ['https://jimcbl.dev/opengraph-image.jpg'],
+    url: 'https://jimcbl-dev.vercel.app/',
   },
   description:
     'A software engineer based in Finland with a demonstrated history of working in the internet industry. Aspiring product management and entrepreneurship.',
