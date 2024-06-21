@@ -2,10 +2,12 @@ export type SocialNetworkType = 'linkedin' | 'github' | 'telegram' | 'unsplash' 
 export interface ExperienceItem {
   time: string;
   company: string;
+  companyURL?: string;
   location: string;
   title: string;
   startDate: string;
   endData?: string;
+  companyLogo?: string;
   content: {
     intro: string;
     list: string[];
@@ -45,8 +47,10 @@ export const experienceProps: ExperienceItem[] = [
     time: 'Jul 2023 - Present',
     startDate: '2023-07-01',
     company: 'Hello Clever',
+    companyURL: 'https://www.linkedin.com/company/helloclever/',
     location: 'Remote | Sydney, Australia',
     title: 'Growth Support Engineer',
+    companyLogo: '/helloclever.jpeg',
     content: {
       intro: "Provided adept technical support for Hello Clever's Payment API integration:",
       list: [
@@ -73,6 +77,8 @@ export const experienceProps: ExperienceItem[] = [
     startDate: '2022-11-01',
     endData: '2023-07-01',
     company: 'Sassybae',
+    companyURL: 'https://www.linkedin.com/company/sassybae/',
+    companyLogo: '/sassybae.jpeg',
     location: 'Remote | Sydney, Australia',
     title: 'Software Engineer',
     content: {
@@ -90,7 +96,9 @@ export const experienceProps: ExperienceItem[] = [
     startDate: '2021-11-01',
     endData: '2022-08-01',
     company: 'LINE Corp',
+    companyLogo: '/line.jpeg',
     location: 'Full-time | Ho Chi Minh City, Vietnam',
+    companyURL: 'https://www.linkedin.com/company/linecorp/',
     title: 'Software Engineer',
     content: {
       intro:
@@ -110,6 +118,8 @@ export const experienceProps: ExperienceItem[] = [
     endData: '2021-10-01',
     company: 'Zalo (VNG Corp)',
     location: 'Full-time | Ho Chi Minh City, Vietnam',
+    companyLogo: '/zalo.jpeg',
+    companyURL: 'https://www.linkedin.com/company/zalocareers/',
     title: 'Associate Software Engineer',
     content: {
       intro: `Spearheaded the development of management tools for Zalo's B2B products, generating millions of USD in annual revenue:`,
@@ -121,5 +131,66 @@ export const experienceProps: ExperienceItem[] = [
       ],
       stack: ['ReactJs', 'NextJs', 'Ant Design', 'Redux', 'LESS'],
     },
+  },
+];
+
+export interface ProjectItem {
+  title: string;
+  description: string;
+  stack: string[];
+  url: string;
+  image: string;
+}
+
+export const personalProjects: ProjectItem[] = [
+  {
+    title: 'jimcbl.dev',
+    description:
+      'Personal portfolio website showcasing  my diverse skillset in web development, with a collection of projects and work experiences.',
+    stack: ['Next.js', 'Tailwind CSS', 'Vercel'],
+    url: 'https://github.com/jimodayne/jimcbl.dev',
+    image: '/opengraph-image.jpg',
+  },
+  {
+    title: 'Hello Clever Documentation',
+    description:
+      "Maintained latest documentation for Hello Clever's Payment API integration and merchant's comprehensive guide.",
+    stack: ['Docusaurus', 'React.js', 'Postman'],
+    url: 'https://docs.helloclever.co/docs/',
+    image: '/helloclever-doc.png',
+  },
+  {
+    title: 'Monster Chase',
+    description:
+      'A simple game to learn about game development. In the game, the player controls a character to void hitting the monster.',
+    stack: ['Unity', 'C#'],
+    url: 'https://github.com/jimodayne/monster_chase',
+    image: '/monster-chase.png',
+  },
+
+  {
+    title: "Sassybae's Landing Page",
+    description:
+      'A landing page for Sassybae, a toy trading platform for kids. The website is built with Next.js and Tailwind CSS.',
+    stack: ['Next.js', 'Tailwind CSS', 'Storyblok'],
+    url: 'https://www.sassybae.com.au/',
+    image: '/sassybaeWeb.png',
+  },
+  {
+    title: 'Sturdy Octo Blog',
+    description:
+      'A full-stack blog application built with Next.js, Tailwind CSS, Ant Design, and Firebase. The application allows users to create, edit, and delete posts.',
+    stack: ['Next.js', 'Tailwind CSS', 'Ant Design', 'Firebase', 'Node.js'],
+    url: 'https://github.com/jimodayne/sturdy-octo-blog',
+    image: '/sturdy-octo-blog.png',
+  },
+
+  {
+    title: "Zalo Cloud's Landing Page",
+    description:
+      'A landing page for Zalo, a cloud service provider. The site is used to introduce the company and its services.',
+    stack: ['Next.js', 'Tailwind CSS', 'Ant Design'],
+    url: 'https://zalo.cloud/',
+    image: '/zalo-cloud.png',
   },
 ];

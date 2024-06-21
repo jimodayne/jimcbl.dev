@@ -1,6 +1,7 @@
 import { SOCIAL_NETWORK_LINKS, SocialNetworkType } from '@/app/props';
 import { IconType } from 'react-icons';
 import { FaLinkedin, FaGithub, FaTelegram, FaUnsplash, FaInstagram } from 'react-icons/fa';
+import cn from 'classnames';
 
 const socialIcons: Record<SocialNetworkType, IconType> = {
   linkedin: FaLinkedin,
@@ -10,16 +11,22 @@ const socialIcons: Record<SocialNetworkType, IconType> = {
   instagram: FaInstagram,
 };
 
-export const SocialNetworkIcons = (props: any) => {
-  const { className } = props;
+interface SocialNetworkIconsProps {
+  className?: string;
+  size?: number;
+  isResponsive?: boolean;
+}
+
+export const SocialNetworkIcons = (props: SocialNetworkIconsProps) => {
+  const { isResponsive, className = '', size = 28 } = props;
 
   return (
-    <div className={'flex gap-4 py-2 ' + className}>
+    <div className={cn(className, 'socialNetworkIcons flex gap-4 py-2 flex-wrap', { isResponsive })}>
       {Object.entries(socialIcons).map(([key, Icon]) => {
         return (
           <a key={key} target="_blank" href={SOCIAL_NETWORK_LINKS[key as SocialNetworkType]}>
             <Icon
-              size={28}
+              size={size}
               className="transition dark:hover:text-white duration-300 hover:text-black dark:hover:opacity-100 hover:scale-110"
             />
           </a>

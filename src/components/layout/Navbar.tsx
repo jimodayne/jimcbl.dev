@@ -2,8 +2,8 @@
 
 import useScroll from '@/hooks/useScroll';
 import useScrollPosition from '@/hooks/useScrollPosition';
-import LightDarkButton from './LightDarkButton';
-import { FaBars } from 'react-icons/fa';
+import LightDarkButton from '../LightDarkButton';
+import Link from 'next/link';
 
 const Navbar = () => {
   const scroll = useScroll();
@@ -21,6 +21,14 @@ const Navbar = () => {
     }
   }
 
+  const handleScrollTop = (e: any) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <nav
       className={
@@ -30,17 +38,11 @@ const Navbar = () => {
     >
       <div className="container mx-auto max-w-screen-xl justify-end items-center lg:px-24 hidden lg:flex">
         <ul className="flex justify-between font-bold text-lg gap-8">
-          <li className="transition duration-300">
-            <a href=""> about </a>
+          <li className="transition duration-200">
+            <Link href="/">home</Link>
           </li>
-          <li className="transition duration-300">
-            <a href=""> education </a>
-          </li>
-          <li className="transition duration-300">
-            <a href=""> experience </a>
-          </li>
-          <li className="transition duration-300">
-            <a href=""> projects </a>
+          <li className="transition duration-200">
+            <Link href="/contact">contact</Link>
           </li>
         </ul>
         <LightDarkButton />
