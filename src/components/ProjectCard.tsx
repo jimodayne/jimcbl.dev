@@ -9,11 +9,11 @@ const ProjectCard = (props: ProjectCardProps) => {
 
   return (
     <a target="_blank" href={url}>
-      <div className="card bg-white border-slate-100 dark:bg-slate-800 overflow-hidden dark:border-slate-500 transition duration-300 hover:shadow-lg dark:hover:shadow-white/10 rounded-xl mb-6 flex gap-4">
+      <div className="card bg-white min-h-28 border-slate-100 highlight-white dark:bg-slate-800 overflow-hidden dark:border-slate-500 ring-1 transition duration-300 ring-slate-900/5 shadow-xl rounded-xl mb-6 flex gap-4">
         <div className="left w-4/12 relative ">
           <Image style={{ objectFit: 'cover' }} src={image} alt="project" fill />
         </div>
-        <div className="right w-8/12 p-4 ">
+        <div className="right w-8/12 p-6 ">
           <p className="font-bold text-lg dark:text-white">{title}</p>
           <p className="py-2">{description}</p>
           <div>

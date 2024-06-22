@@ -11,11 +11,11 @@ const getTimeToX = (time1: string, time2?: string) => {
 };
 
 const WorkItem = (props: WorkItemProps) => {
-  const { time, company, title, location, content, startDate, endData, companyLogo } = props;
+  const { time, company, title, location, content, startDate, endData, companyLogo, companyURL } = props;
 
   return (
-    <div key={company} className="text-sm py-4">
-      <a>
+    <div key={company} className="text-sm py-6">
+      <a target="_blank" href={companyURL}>
         <div className="flex items-center mb-2">
           {companyLogo && <Image src={companyLogo} className="mr-2" alt={company} width={48} height={48} />}
           <div className="dark:text-gray-100 company text-xl font-bold">{company}</div>

@@ -52,9 +52,9 @@ export default function Home() {
           })}
         </div>
 
-        <section className="mb-8">
-          <div className="mt-14">
-            <h3 className="text-2xl font-bold mb-6 dark:text-white"> Projects and Works</h3>
+        <section id="projects" className="mb-8">
+          <div className="mt-10 pt-4">
+            <h3 className="text-2xl font-bold mb-6 dark:text-white">Projects and Works</h3>
           </div>
 
           <div>

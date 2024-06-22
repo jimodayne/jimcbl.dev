@@ -32,7 +32,7 @@ const Navbar = () => {
   return (
     <nav
       className={
-        'w-full navbar bg-slate-50 dark:bg-slate-900 dark:text-slate-300 lg:top-0  lg:pt-6 lg:pb-6 lg:fixed lg:transition lg:duration-200 ' +
+        'w-full navbar bg-slate-50 z-20 relative dark:bg-slate-900 dark:text-slate-300 lg:top-0  lg:pt-6 lg:pb-6 lg:fixed lg:transition lg:duration-200 ' +
         classScroll
       }
     >
@@ -40,6 +40,9 @@ const Navbar = () => {
         <ul className="flex justify-between font-bold text-lg gap-8">
           <li className="transition duration-200">
             <Link href="/">home</Link>
+          </li>
+          <li className="transition duration-200">
+            <Link href="/#projects">projects</Link>
           </li>
           <li className="transition duration-200">
             <Link href="/contact">contact</Link>

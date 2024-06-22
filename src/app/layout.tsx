@@ -33,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={'bg-slate-50 dark:bg-slate-900 relative ' + lato.className}>
+      <body className={'bg-white dark:bg-slate-900 relative ' + lato.className}>
         <Navbar />
         <main className="dark:text-gray-300 max-w-screen-xl mx-auto px-10 lg:px-24 lg:mt-24">{children}</main>
         <Footer />
