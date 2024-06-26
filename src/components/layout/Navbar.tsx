@@ -31,6 +31,7 @@ const Navbar = () => {
 
   return (
     <nav
+      id="navbar"
       className={
         'w-full navbar dark:ring-slate-100/25 ring-slate-900/5 bg-white z-20 relative dark:bg-slate-900 dark:text-slate-300 lg:top-0 px-6 pt-6 lg:px-0  lg:pt-6 lg:pb-6 lg:fixed lg:transition lg:duration-200  ' +
         classScroll
@@ -39,7 +40,7 @@ const Navbar = () => {
       <div className="container mx-auto max-w-screen-xl justify-end items-center lg:px-24 hidden lg:flex">
         <ul className="flex justify-between font-bold text-lg gap-8">
           <li className="transition duration-200">
-            <Link href="/">home</Link>
+            <Link href="/#navbar">home</Link>
           </li>
           <li className="transition duration-200">
             <Link href="/#projects">projects</Link>
