@@ -31,14 +31,18 @@ export const techStacks: string[] = [
   'React.js',
   'Next.js',
   'Vue.js',
+  'Node.js',
+  'Python',
+  'C#',
+  'Java',
   'Ant Design',
+  'Google Cloud Platform',
   'Tailwind CSS',
   'Firebase',
   'Typescript',
   'Javascript',
   'HTML',
   'CSS',
-  'Node.js',
   'Postman',
 ];
 
@@ -88,7 +92,7 @@ export const experienceProps: ExperienceItem[] = [
         'Implemented API cloud functions for tasks such as filtering inappropriate images and retrieving nearby products using geohash for the mobile application.',
         'Attained a performance score of 98/100 for the desktop version and 91/100 for the mobile version through Google Lighthouse measurement.',
       ],
-      stack: ['Next.js', 'React.js', 'Tailwind CSS', 'Firebase', 'Typescript'],
+      stack: ['Next.js', 'React.js', 'Tailwind CSS', 'Firebase', 'Typescript', 'Node.js', 'Google Cloud Functions'],
     },
   },
   {
@@ -129,7 +133,7 @@ export const experienceProps: ExperienceItem[] = [
         `Revamped the landing page using NextJs, achieving a significant performance boost (up to +130% Google Lighthouse measurement).`,
         `Assumed leadership responsibilities, managing a team of four frontend developers and assigning tasks as directed by the technical manager.`,
       ],
-      stack: ['ReactJs', 'NextJs', 'Ant Design', 'Redux', 'LESS'],
+      stack: ['ReactJs', 'NextJs', 'Ant Design', 'Redux', 'LESS', 'Java'],
     },
   },
 ];
@@ -170,9 +174,8 @@ export const personalProjects: ProjectItem[] = [
 
   {
     title: "Sassybae's Landing Page",
-    description:
-      'A landing page for Sassybae, a toy trading platform for kids. The website is built with Next.js and Tailwind CSS.',
-    stack: ['Next.js', 'Tailwind CSS', 'Storyblok'],
+    description: 'A landing page for Sassybae, a toy trading platform for kids.',
+    stack: ['Next.js', 'Tailwind CSS', 'Storyblok', 'Node.js', 'Cloud Functions'],
     url: 'https://www.sassybae.com.au/',
     image: '/sassybaeWeb.png',
   },

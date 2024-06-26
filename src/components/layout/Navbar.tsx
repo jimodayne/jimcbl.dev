@@ -32,7 +32,7 @@ const Navbar = () => {
   return (
     <nav
       className={
-        'w-full navbar bg-slate-50 z-20 relative dark:bg-slate-900 dark:text-slate-300 lg:top-0  lg:pt-6 lg:pb-6 lg:fixed lg:transition lg:duration-200 ' +
+        'w-full navbar dark:ring-slate-100/25 ring-slate-900/5 bg-white z-20 relative dark:bg-slate-900 dark:text-slate-300 lg:top-0 px-6 pt-6 lg:px-0  lg:pt-6 lg:pb-6 lg:fixed lg:transition lg:duration-200  ' +
         classScroll
       }
     >
@@ -50,7 +50,7 @@ const Navbar = () => {
         </ul>
         <LightDarkButton />
       </div>
-      <div className="pt-4 flex lg:hidden items-center justify-end">
+      <div className="flex lg:hidden items-center justify-end">
         {/* <FaBars size={24} /> */}
         <LightDarkButton />
       </div>
