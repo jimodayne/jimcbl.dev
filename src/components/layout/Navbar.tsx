@@ -46,6 +46,9 @@ const Navbar = () => {
             <Link href="/#projects">projects</Link>
           </li>
           <li className="transition duration-200">
+            <Link href="/photos">photos</Link>
+          </li>
+          <li className="transition duration-200">
             <Link href="/contact">contact</Link>
           </li>
         </ul>

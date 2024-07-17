@@ -6,8 +6,6 @@ import { useEffect, useState } from 'react';
 export default function LightDarkButton() {
   const [isDark, setIsDark] = useState(false); //default state
 
-  console.log('LightDarkButton ', isDark);
-
   //Handles changing the color mode and stores state in localStorage
   const toggleDarkMode = (state: boolean) => {
     //Add/Remove dark class to the root element and from local storage

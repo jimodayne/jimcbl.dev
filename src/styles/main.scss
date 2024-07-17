@@ -95,7 +95,13 @@
     gap: 2em;
   }
   .socialNetworkIcons.isResponsive svg {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
   }
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: masonry;
 }
