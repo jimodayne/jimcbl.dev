@@ -1,6 +1,7 @@
 import { createApi } from 'unsplash-js';
 import { IPhoto, photos } from './props';
 import { Suspense } from 'react';
+import { SOCIAL_NETWORK_LINKS } from '../props';
 
 const getData = async (): Promise<IPhoto[]> => {
   //   const unsplash = createApi({
@@ -48,16 +49,29 @@ const Photo = async () => {
 
   return (
     <div className="pb-8">
-      {/* <h1>Photo</h1> */}
-      <p className="py-5">
-        Here are some of my photos. You can find more on Unsplash by clicking the button below. Sony A7C.
+      <h1 className="font-bold text-3xl">Photo</h1>
+      <p className="py-5 text-sm">
+        Here are some of my photos. You can find more on my{' '}
+        <a target="_blank" href={SOCIAL_NETWORK_LINKS.unsplash}>
+          <span className="underline font-bold decoration-sky-400 transition duration-300 hover:decoration-sky-600">
+            Unsplash
+          </span>
+        </a>
+        .
       </p>
       <Suspense fallback={<div>Loading ... </div>}>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {threeColumns.map((column, index) => (
-            <div key={index} className="grid flex-wrap gap-4 content-start">
+            <div key={index} className="grid flex-wrap gap-6 content-start">
               {column.map((photo) => (
-                <img key={photo.id} src={photo.urls.regular} loading="lazy" alt={photo.alt_description} />
+                <a title={photo.alt_description} key={photo.id} target="_blank" href={photo.links.html}>
+                  <img
+                    className="hover:scale-[102%] duration-300 ease-in-out transition-all"
+                    src={photo.urls.regular}
+                    loading="lazy"
+                    alt={photo.alt_description}
+                  />
+                </a>
               ))}
             </div>
           ))}
