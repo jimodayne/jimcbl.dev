@@ -15,9 +15,9 @@ export default function Home() {
               id="about"
               className={'text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold dark:text-white ' + garamond.className}
             >
-              Jim Tran
+              Thinh Tran
             </h1>
-            <h2 className="text-lg sm:text-xl lg:text-2xl mt-1 dark:text-grey-400">Software Engineer</h2>
+            <h2 className="text-lg sm:text-xl lg:text-xl mt-1 dark:text-grey-400">PhD Student | Research Assistant </h2>
           </div>
 
           <div className="intro dark:text-gray-200 lg:text-lg">

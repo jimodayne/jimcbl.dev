@@ -48,6 +48,24 @@ export const techStacks: string[] = [
 
 export const experienceProps: ExperienceItem[] = [
   {
+    time: 'From Nov 2024',
+    startDate: '2024-11-01',
+    company: 'IMT Atlantique',
+    companyURL: 'https://www.imt-atlantique.fr/en',
+    location: 'Full-time | Brest, France',
+    title: 'PhD Student | Junior Researcher',
+    companyLogo: '/IMT_Atlantique_logo.png',
+    content: {
+      intro:
+        'Conducting research on the topic of "Analysing Civic Tech project to design replicable process models allowing them to scale-up" under the supervision of Prof. Nicolas Jullien',
+      list: [
+        'Developing a framework to support the development of civic tech projects by leveraging digital commons institutional studies and software engineering principles.',
+        'Conducting interviews with stakeholders to understand the challenges and requirements of civic tech projects.',
+        'Collaborating with the research team to publish papers and present findings at conferences.',
+      ],
+    },
+  },
+  {
     time: 'Jul 2023 - Present',
     startDate: '2023-07-01',
     company: 'Hello Clever',
