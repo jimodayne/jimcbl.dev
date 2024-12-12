@@ -9,11 +9,7 @@ const Contact = () => {
       >
         Contact
       </h1>
-      <p className="mb-4 lg:text-lg">
-        I&apos;m currently looking for new opportunities. If you have a project or just want to say hi, feel free to
-        contact me.
-      </p>
-
+      <p className="mb-4 lg:text-lg">Hi there,</p>
       <p className="mb-4 lg:text-lg">
         You can drop me an email at{' '}
         <a

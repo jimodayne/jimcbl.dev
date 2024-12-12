@@ -48,7 +48,7 @@ const SocialNetwork = () => {
       </a>
 
       <div className="mb-2">
-        <a> Lahti, Finland </a>
+        <a> Brest, France </a>
       </div>
 
       <SocialNetworkIcons />

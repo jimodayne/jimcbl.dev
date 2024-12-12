@@ -22,7 +22,7 @@ export interface ExperienceItem {
 export const SOCIAL_NETWORK_LINKS: Record<SocialNetworkType, string> = {
   linkedin: 'https://linkedin.com/in/thinhtran98/',
   github: 'https://github.com/jimodayne',
-  telegram: 'https://t.me/jimtran_hc',
+  telegram: 'https://t.me/jimcbl',
   unsplash: 'https://unsplash.com/@jimcbl',
   instagram: 'https://instagram.com/jimcbl/',
 };
@@ -48,8 +48,8 @@ export const techStacks: string[] = [
 
 export const experienceProps: ExperienceItem[] = [
   {
-    time: 'From Nov 2024',
-    startDate: '2024-11-01',
+    time: 'Dec 2024 - Present',
+    startDate: '2024-12-01',
     company: 'IMT Atlantique',
     companyURL: 'https://www.imt-atlantique.fr/en',
     location: 'Full-time | Brest, France',
@@ -66,8 +66,9 @@ export const experienceProps: ExperienceItem[] = [
     },
   },
   {
-    time: 'Jul 2023 - Present',
+    time: 'Jul 2023 - Dec 2024',
     startDate: '2023-07-01',
+    endData: '2024-12-12',
     company: 'Hello Clever',
     companyURL: 'https://www.linkedin.com/company/helloclever/',
     location: 'Remote | Sydney, Australia',

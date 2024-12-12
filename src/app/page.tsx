@@ -27,7 +27,7 @@ export default function Home() {
               <span className="underline font-bold decoration-yellow-400 transition duration-200 hover:decoration-yellow-600">
                 JavaScript
               </span>
-              , its frameworks and libraries.
+              , its frameworks and libraries. I&apos;m currently a PhD student at IMT Atlantique, France.
             </p>
             <p className="">
               Outside of coding, I enjoy taking photos, traveling, and music. You can find my photography work on{' '}
@@ -52,7 +52,7 @@ export default function Home() {
           })}
         </div>
 
-        <section id="projects" className="mb-8">
+        {/* <section id="projects" className="mb-8">
           <div className="mt-10 pt-4">
             <h3 className="text-2xl font-bold mb-6 dark:text-white">Projects and Works</h3>
           </div>
@@ -62,7 +62,7 @@ export default function Home() {
               return <ProjectCard key={idx} {...item} />;
             })}
           </div>
-        </section>
+        </section> */}
       </div>
       <div className="mid lg:w-1/12" />
       <div className="right lg:w-3/12">

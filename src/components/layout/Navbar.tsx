@@ -42,9 +42,9 @@ const Navbar = () => {
           <li className="transition duration-200">
             <Link href="/#navbar">home</Link>
           </li>
-          <li className="transition duration-200">
+          {/* <li className="transition duration-200">
             <Link href="/#projects">projects</Link>
-          </li>
+          </li> */}
           <li className="transition duration-200">
             <Link href="/photos">photos</Link>
           </li>
