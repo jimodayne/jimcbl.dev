@@ -47,19 +47,23 @@ export default function Home() {
 
         <div className="mt-14 mb-14">
           <h3 className="text-2xl font-bold mb-6 dark:text-gray-200"> Experience </h3>
-          {experienceProps.map((item, idx) => {
-            return <WorkItem key={idx} {...item} />;
+          {experienceProps.map((item) => {
+            return <WorkItem key={`${item.company}-${item.startDate}`} {...item} />;
           })}
         </div>
-
-        {/* <section id="projects" className="mb-8">
+        {/* 
+        <section id="projects" className="mb-8 scroll-mt-24">
           <div className="mt-10 pt-4">
-            <h3 className="text-2xl font-bold mb-6 dark:text-white">Projects and Works</h3>
+            <h3 className="text-2xl font-bold dark:text-white">Selected Projects</h3>
+            <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600 dark:text-slate-300">
+              A mix of product work, developer tooling, and experiments that reflect how I build for performance,
+              clarity, and maintainability.
+            </p>
           </div>
 
-          <div>
-            {personalProjects.map((item, idx) => {
-              return <ProjectCard key={idx} {...item} />;
+          <div className="mt-6 grid gap-6">
+            {personalProjects.map((item) => {
+              return <ProjectCard key={item.slug} {...item} />;
             })}
           </div>
         </section> */}

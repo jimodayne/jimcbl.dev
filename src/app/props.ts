@@ -158,6 +158,7 @@ export const experienceProps: ExperienceItem[] = [
 ];
 
 export interface ProjectItem {
+  slug: string;
   title: string;
   description: string;
   stack: string[];
@@ -167,50 +168,57 @@ export interface ProjectItem {
 
 export const personalProjects: ProjectItem[] = [
   {
+    slug: 'portfolio',
     title: 'jimcbl.dev',
     description:
-      'Personal portfolio website showcasing  my diverse skillset in web development, with a collection of projects and work experiences.',
-    stack: ['Next.js', 'Tailwind CSS', 'Vercel'],
+      'A fast personal site for writing, showcasing selected work, and keeping my experience, photography, and contact details in one place.',
+    stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Vercel'],
     url: 'https://github.com/jimodayne/jimcbl.dev',
     image: '/opengraph-image.jpg',
   },
   {
+    slug: 'hello-clever-docs',
     title: 'Hello Clever Documentation',
     description:
-      "Maintained latest documentation for Hello Clever's Payment API integration and merchant's comprehensive guide.",
-    stack: ['Docusaurus', 'React.js', 'Postman'],
+      'Developer and merchant documentation for a payment API, focused on clearer integration flows, faster onboarding, and lower support overhead.',
+    stack: ['Docusaurus', 'React', 'Postman'],
     url: 'https://docs.helloclever.co/docs/',
     image: '/helloclever-doc.png',
   },
   {
+    slug: 'monster-chase',
     title: 'Monster Chase',
     description:
-      'A simple game to learn about game development. In the game, the player controls a character to void hitting the monster.',
+      'A small Unity game built to explore core game-loop design, collision handling, and moment-to-moment player feedback.',
     stack: ['Unity', 'C#'],
     url: 'https://github.com/jimodayne/monster_chase',
     image: '/monster-chase.png',
   },
 
   {
+    slug: 'sassybae-landing',
     title: "Sassybae's Landing Page",
-    description: 'A landing page for Sassybae, a toy trading platform for kids.',
+    description:
+      'A marketing site for a toy trading platform, built to communicate the product clearly and keep performance high on mobile.',
     stack: ['Next.js', 'Tailwind CSS', 'Storyblok', 'Node.js', 'Cloud Functions'],
     url: 'https://www.sassybae.com.au/',
     image: '/sassybaeWeb.png',
   },
   {
+    slug: 'sturdy-octo-blog',
     title: 'Sturdy Octo Blog',
     description:
-      'A full-stack blog application built with Next.js, Tailwind CSS, Ant Design, and Firebase. The application allows users to create, edit, and delete posts.',
+      'A full-stack blogging app with authenticated content management, post CRUD flows, and a practical Firebase-backed publishing setup.',
     stack: ['Next.js', 'Tailwind CSS', 'Ant Design', 'Firebase', 'Node.js'],
     url: 'https://github.com/jimodayne/sturdy-octo-blog',
     image: '/sturdy-octo-blog.png',
   },
 
   {
+    slug: 'zalo-cloud-landing',
     title: "Zalo Cloud's Landing Page",
     description:
-      'A landing page for Zalo, a cloud service provider. The site is used to introduce the company and its services.',
+      'A landing page for a cloud platform, designed to introduce the product suite with a cleaner structure and stronger Lighthouse performance.',
     stack: ['Next.js', 'Tailwind CSS', 'Ant Design'],
     url: 'https://zalo.cloud/',
     image: '/zalo-cloud.png',

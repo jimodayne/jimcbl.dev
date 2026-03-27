@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     url: 'https://jimcbl-dev.vercel.app/',
   },
   description:
-    'A software engineer based in Finland with a demonstrated history of working in the internet industry. Aspiring product management and entrepreneurship.',
+    'A PhD student based in France with a demonstrated history of working in the internet industry. Aspiring product management and entrepreneurship.',
 };
 
 export default function RootLayout({

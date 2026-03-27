@@ -1,14 +1,8 @@
-import dayjs from 'dayjs';
 import Image from 'next/image';
 import { ExperienceItem } from '../app/props';
 import Badge from './Badge';
 
 interface WorkItemProps extends ExperienceItem {}
-
-const getTimeToX = (time1: string, time2?: string) => {
-  if (!time2) return dayjs(time1).subtract(1, 'month').toNow(true);
-  return dayjs(time1).to(dayjs(time2).add(1, 'month'), true);
-};
 
 const WorkItem = (props: WorkItemProps) => {
   const { time, company, title, location, content, startDate, endData, companyLogo, companyURL } = props;

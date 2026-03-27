@@ -1,4 +1,4 @@
-import SocialNetwork, { SocialNetworkIcons } from '@/components/SocialNetwork';
+import { SocialNetworkIcons } from '@/components/SocialNetwork';
 import { garamond } from '../font';
 
 const Contact = () => {

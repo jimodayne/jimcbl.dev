@@ -1,23 +1,13 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 //Toggle logic
 export default function LightDarkButton() {
-  const [isDark, setIsDark] = useState(false); //default state
-
   //Handles changing the color mode and stores state in localStorage
-  const toggleDarkMode = (state: boolean) => {
-    //Add/Remove dark class to the root element and from local storage
-    if (isDark) {
-      setIsDark(false);
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('darkMode', 'disabled');
-    } else {
-      setIsDark(true);
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('darkMode', 'enabled');
-    }
+  const toggleDarkMode = () => {
+    const isDark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
   };
 
   //Get color mode state from localStorage, if there isn't one, then get users preferred color mode
@@ -28,9 +18,7 @@ export default function LightDarkButton() {
 
     //Set the checked state based on local storage value or by default user preference if there is no value in local storage
     if ((darkMode && darkMode === 'enabled') || (!darkMode && prefersDarkMode)) {
-      console.log('dark mode enabled');
       document.documentElement.classList.add('dark');
-      setIsDark(true);
     }
   }, []);
 
@@ -38,7 +26,7 @@ export default function LightDarkButton() {
     <button
       type="button"
       aria-label="Toggle dark mode"
-      onClick={() => toggleDarkMode(isDark)}
+      onClick={toggleDarkMode}
       className="h-8 w-8 ml-4 lg:ml-8 rounded-lg p-1 hover:bg-gray-100 dark:hover:bg-gray-700"
     >
       <svg className="fill-violet-700 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
