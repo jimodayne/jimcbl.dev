@@ -57,11 +57,11 @@ export const experienceProps: ExperienceItem[] = [
     companyLogo: '/IMT_Atlantique_logo.png',
     content: {
       intro:
-        'Conducting research on the topic of "Analysing Civic Tech project to design replicable process models allowing them to scale-up" under the supervision of Prof. Nicolas Jullien',
+        'Conducting research on the topic of "Analysing Civic Tech project to design replicable process models allowing them to scale-up" under the supervision of Prof. Nicolas Jullien and Associate Professor Antti Knutas',
       list: [
-        'Developing a framework to support the development of civic tech projects by leveraging digital commons institutional studies and software engineering principles.',
+        'Developing a framework to support the development of civic tech projects by applying software engineering principles.',
         'Conducting interviews with stakeholders to understand the challenges and requirements of civic tech projects.',
-        'Collaborating with the research team to publish papers and present findings at conferences.',
+        'Collaborating with the research team to publish papers and present findings',
       ],
     },
   },
